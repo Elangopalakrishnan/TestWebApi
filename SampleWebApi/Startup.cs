@@ -26,6 +26,7 @@ namespace SampleWebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            //add more controllers
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
