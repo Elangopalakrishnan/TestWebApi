@@ -23,3 +23,12 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+
+    - run: mkdir -p ./SampleWebApi/artifact/
+
+    - run: echo hello > ./SampleWebApi/artifact/world.txt
+
+    - uses: actions/upload-artifact@v3
+      with:
+        name: my-artifactEpk
+        path: ./SampleWebApi/artifact/world.txt
